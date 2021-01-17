@@ -5,7 +5,7 @@
 }
 
 body {
-    // overflow: hidden;
+    background-color: rgb(179, 179, 255);
 }
 
 .layout {
@@ -15,6 +15,7 @@ body {
     width: 1200px;
     height: 700px;
     position: relative;
+    margin: auto;
 }
 
 .blackout {
@@ -41,40 +42,14 @@ body {
 }
 
 .bird {
-    background-image: url(/images/idle.png);
-    background-color: rgba(165, 44, 44, 0.4);
+    background-image: url(/images/stand.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 0 0;
-    // min-width: 50px;
-    // min-height: 40px;
-    // min-width: 100px;
-    // min-height: 80px;
-    width: 100px;
-    height: 150px;
-    // transform: translate(50px, 0); 
-    // width: 150px;
-    // height: 200px;
-    // margin-left: auto;
-
-    // background-image: url(/images/run.png);
-    // background-size: contain;
-
+    width: 120px;
+    height: 138.7px;
+    z-index: 1;
 }
-
-// .running-bird {
-//     background-image: url(/images/run.png);
-//     background-color: rgba(165, 44, 44, 0.4);
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     background-position: center bottom;
-//     min-width: 50px;
-//     min-height: 40px;
-//     width: 7vw;
-//     height: 17vh; 
-//     margin-left: auto;
-//     visibility: hidden;
-// }
 
 .platform {
     width: 150px;
@@ -96,8 +71,8 @@ body {
     bottom: 29px;
     left: 125px; /* width platform - 25px */
     transform-origin: bottom right;
-    // transform: rotate(90deg);
     transition: transform 0.5s linear, opacity 0.5s linear;
+    z-index: 1;
 }
 
 .new-platform {
@@ -107,4 +82,69 @@ body {
     height: 30px;
     background-image: linear-gradient(purple, black);
     transition: transform 1s linear;
+}
+
+.lifes {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    background-image: url(/images/heart.png);
+    width: 120px; // по 40px
+    height: 35.5px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 0 0;
+}
+
+.text-score {
+    position: absolute;
+    top: 110px;
+    left: 500px;
+    text-align: center;
+    width: 200px;
+    font-size: 30px;
+    color: rgb(182, 156, 12);
+}
+
+.score {
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    text-align: center;
+    width: 200px;
+    font-family: 'Potta One', cursive;
+    font-size: 32px;
+    color: gold;
+    text-shadow: 2px 2px 0 rgb(136, 105, 5),
+    3px 3px 0 rgb(214, 183, 4);
+}
+
+.text-record {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    text-align: right;
+    width: 100px;
+    font-size: 30px;
+    color: rgb(182, 156, 12);
+}
+
+.record {
+    position: absolute;
+    top: 90px;
+    right: 100px;
+    text-align: right;
+    width: 100px;
+    font-size: 30px;
+    color: rgb(182, 156, 12);
+}
+
+.description {
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    text-align: left;
+    width: 300px;
+    font-size: 20px;
+    color: rgb(182, 156, 12);
 }
