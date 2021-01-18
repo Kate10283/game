@@ -202,7 +202,7 @@ function rand(min, max) {
 }
 function run() {
     let counter = 0;
-    bird.style.backgroundImage = "url(/images/run.png)";
+    bird.style.backgroundImage = "url(./images/run.png)";
     timerId2 = window.setInterval(() => {
         bird.style.backgroundPosition = backgroundPosition[counter];
         counter++;
